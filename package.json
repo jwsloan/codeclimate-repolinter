@@ -1,0 +1,35 @@
+{
+  "name": "codeclimate-repolinter",
+  "version": "0.1.0",
+  "description": "CodeClimate Engine for todogroup/repolinter",
+  "main": "index.js",
+  "bin": {
+    "codeclimate-repolinter": "bin/codeclimate-repolinter.js"
+  },
+  "scripts": {
+    "test": "standard --env mocha && mocha tests/**/*.js --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwsloan/codeclimate-repolinter.git"
+  },
+  "keywords": [
+    "codeclimate",
+    "engine",
+    "repolinter"
+  ],
+  "author": "John Sloan <jwsloan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwsloan/codeclimate-repolinter/issues"
+  },
+  "homepage": "https://github.com/jwsloan/codeclimate-repolinter#readme",
+  "dependencies": {
+    "file-exists": "^5.0.0",
+    "repolinter": "github:todogroup/repolinter",
+    "standard": "^10.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}

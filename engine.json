@@ -1,0 +1,11 @@
+{
+  "name": "repolinter",
+  "description": "Lint repositories for common issues.",
+  "maintainer": {
+    "name": "John Sloan",
+    "email": "jwsloan@gmail.com"
+  },
+  "languages" : ["*"],
+  "version": "0.1.0",
+  "spec_version": "0.3.1"
+}

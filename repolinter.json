@@ -1,0 +1,177 @@
+{
+  "rules": {
+    "all": {
+      "license-file-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "LICENSE*",
+            "COPYING*"
+          ]
+        }
+      ],
+      "readme-file-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "README*"
+          ]
+        }
+      ],
+      "contributing-file-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "CONTRIB*"
+          ]
+        }
+      ],
+      "code-of-conduct-file-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "CODEOFCONDUCT*",
+            "CODE-OF-CONDUCT*",
+            "CODE_OF_CONDUCT*"
+          ]
+        }
+      ],
+      "readme-references-license:file-contents": [
+        "error",
+        {
+          "files": [
+            "README*"
+          ],
+          "content": "license",
+          "flags": "i"
+        }
+      ],
+      "binaries-not-present:file-type-exclusion": [
+        "error",
+        {
+          "type": [
+            "**/*.exe",
+            "**/*.dll"
+          ]
+        }
+      ],
+      "license-detectable-by-licensee": [
+        "error"
+      ],
+      "test-directory-exists:directory-existence": [
+        "error",
+        {
+          "directories": [
+            "test*",
+            "specs"
+          ]
+        }
+      ],
+      "integrates-with-ci:file-existence": [
+        "error",
+        {
+          "files": [
+            ".gitlab-ci.yml",
+            ".travis.yml",
+            "appveyor.yml",
+            "circle.yml"
+          ]
+        }
+      ],
+      "source-license-headers-exist:file-starts-with": [
+        "warning",
+        {
+          "files": [
+            "**/*.js",
+            "!node_modules/**"
+          ],
+          "lineCount": 5,
+          "patterns": [
+            "Copyright",
+            "All rights reserved",
+            "Licensed under"
+          ]
+        }
+      ],
+      "dir-is-managed-with-git:git-working-tree": [
+        "warning",
+        {
+          "allowSubDir": false
+        }
+      ],
+      "git-log-contains-no-blacklisted-words:git-grep-log": [
+        "error",
+        {
+          "blacklist": [
+            "secret",
+            "password"
+          ],
+          "ignoreCase": true
+        }
+      ],
+      "git-commits-contain-no-blacklisted-words:git-grep-commits": [
+        "error",
+        {
+          "blacklist": [
+            "secret",
+            "password"
+          ],
+          "ignoreCase": true
+        }
+      ],
+      "git-tree-contains-no-blacklisted-files:git-list-tree": [
+        "error",
+        {
+          "blacklist": [
+            "secret",
+            "password"
+          ],
+          "ignoreCase": true
+        }
+      ]
+    },
+    "javascript": {
+      "package-metadata-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "package.json"
+          ]
+        }
+      ]
+    },
+    "ruby": {
+      "package-metadata-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "Gemfile",
+            "Gemfile.lock"
+          ]
+        }
+      ]
+    },
+    "java": {
+      "package-metadata-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "pom.xml",
+            "build.xml",
+            "build.gradle"
+          ]
+        }
+      ]
+    },
+    "python": {
+      "package-metadata-exists:file-existence": [
+        "error",
+        {
+          "files": [
+            "requirements.txt"
+          ]
+        }
+      ]
+    }
+  }
+}
